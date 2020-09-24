@@ -3,7 +3,7 @@ import "./App.css";
 import firebase from "firebase/app";
 import { useAuthState } from "react-firebase-hooks/auth";
 import fbConfig from "./fbConfig";
-import SignOut from "./components/SignOut";
+import Header from "./components/Header";
 import SignIn from "./components/SignIn";
 import ChatRoom from "./components/ChatRoom";
 
@@ -15,11 +15,7 @@ function App() {
   const [user] = useAuthState(auth);
   return (
     <div className="App">
-      <header>
-        <h1>Chat-React</h1>
-        <SignOut />
-      </header>
-
+      <Header />
       <section>{user ? <ChatRoom /> : <SignIn />}</section>
     </div>
   );

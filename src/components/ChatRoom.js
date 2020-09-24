@@ -32,12 +32,12 @@ function ChatRoom() {
 
   return (
     <>
-      <div>
+      <main>
         {messages &&
           messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
 
-        <div ref={dummy}></div>
-      </div>
+        <span ref={dummy}></span>
+      </main>
 
       <form onSubmit={sendMessage}>
         <input
