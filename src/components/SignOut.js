@@ -1,10 +1,14 @@
 import React from "react";
 import firebase from "firebase/app";
-
+import { Button } from "@material-ui/core";
 function SignOut() {
   const auth = firebase.auth();
   return (
-    auth.currentUser && <button onClick={() => auth.signOut()}>Sign Out</button>
+    auth.currentUser && (
+      <Button onClick={() => auth.signOut()} variant="outlined">
+        Sign Out
+      </Button>
+    )
   );
 }
 

@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import firebase from "firebase/app";
 import ChatMessage from "./ChatMessage";
+import { TextField, Button, BottomNavigation } from "@material-ui/core";
+import SendIcon from "@material-ui/icons/Send";
 
 function ChatRoom() {
   const auth = firebase.auth();
@@ -38,14 +40,19 @@ function ChatRoom() {
 
         <span ref={dummy}></span>
       </main>
-
-      <form onSubmit={sendMessage}>
-        <input
-          value={formValue}
-          onChange={(e) => setFormValue(e.target.value)}
-        />
-        <button type="submit">Send</button>
-      </form>
+      <BottomNavigation className="stickToBottom">
+        <form onSubmit={sendMessage}>
+          <TextField
+            value={formValue}
+            variant="outlined"
+            onChange={(e) => setFormValue(e.target.value)}
+            placeholder="Type your message"
+          />
+          <Button type="submit" variant="contained">
+            <SendIcon />
+          </Button>
+        </form>
+      </BottomNavigation>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./style.scss";
 import firebase from "firebase/app";
 import { useAuthState } from "react-firebase-hooks/auth";
 import fbConfig from "./fbConfig";
@@ -16,7 +16,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <section>{user ? <ChatRoom /> : <SignIn />}</section>
+      <section className={user ? "" : "login"}>
+        {user ? <ChatRoom /> : <SignIn />}
+      </section>
     </div>
   );
 }

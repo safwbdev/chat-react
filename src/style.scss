@@ -1,0 +1,69 @@
+main {
+  padding-top: 10vh;
+  padding-bottom: 13vh;
+  .message {
+    .MuiChip-root {
+      margin: 5px;
+      font-size: 1em;
+    }
+    &.sent {
+      display: flex;
+      flex-direction: row-reverse;
+      .MuiChip-root {
+        background: #0b93f6 !important;
+        flex-direction: row-reverse;
+        color: #ffffff;
+
+        .MuiChip-avatar {
+          margin-right: 6px;
+        }
+      }
+    }
+    &.recieved {
+      .MuiChip-root {
+        background: #e5e5ea !important;
+      }
+    }
+  }
+}
+.stickTo {
+  &Top {
+    width: 100% !important;
+    position: fixed !important;
+  }
+  &Bottom {
+    width: 100% !important;
+    position: fixed !important;
+    bottom: 0;
+    height: 12vh !important;
+  }
+}
+form {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 6px;
+  .MuiTextField-root {
+    justify-content: center;
+    width: 100%;
+  }
+  button {
+    margin-left: 1em;
+  }
+}
+section {
+  &.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+.MuiAppBar-root {
+  button {
+    color: #ffffff;
+    border: 1px solid #ffffff !important;
+  }
+}

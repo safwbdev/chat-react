@@ -1,5 +1,6 @@
 import React from "react";
 import firebase from "firebase/app";
+import { Avatar, Chip } from "@material-ui/core";
 
 function ChatMessage(props) {
   const auth = firebase.auth();
@@ -9,8 +10,7 @@ function ChatMessage(props) {
 
   return (
     <div className={`message ${messageClass}`}>
-      <img src={photoURL} alt="" />
-      <p>{text}</p>
+      <Chip avatar={<Avatar alt="Natacha" src={photoURL} />} label={text} />
     </div>
   );
 }
