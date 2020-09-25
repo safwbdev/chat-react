@@ -5,6 +5,11 @@ main {
     .MuiChip-root {
       margin: 5px;
       font-size: 1em;
+      height: unset !important;
+      .MuiChip-label {
+        white-space: pre-wrap !important;
+        padding: 12px !important;
+      }
     }
     &.sent {
       display: flex;
@@ -20,6 +25,7 @@ main {
       }
     }
     &.recieved {
+      display: flex;
       .MuiChip-root {
         background: #e5e5ea !important;
       }
@@ -36,6 +42,7 @@ main {
     position: fixed !important;
     bottom: 0;
     height: 12vh !important;
+    background: #3f51b5 !important;
   }
 }
 form {
@@ -46,9 +53,13 @@ form {
   .MuiTextField-root {
     justify-content: center;
     width: 100%;
+    .MuiOutlinedInput-root {
+      background: #ffffff !important;
+    }
   }
   button {
     margin-left: 1em;
+    color: #ffffff !important;
   }
 }
 section {
@@ -64,6 +75,8 @@ section {
 .MuiAppBar-root {
   button {
     color: #ffffff;
+  }
+  .logout-btn {
     border: 1px solid #ffffff !important;
   }
 }

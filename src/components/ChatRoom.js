@@ -48,7 +48,7 @@ function ChatRoom() {
             onChange={(e) => setFormValue(e.target.value)}
             placeholder="Type your message"
           />
-          <Button type="submit" variant="contained">
+          <Button type="submit">
             <SendIcon />
           </Button>
         </form>

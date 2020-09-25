@@ -10,7 +10,9 @@ function ChatMessage(props) {
 
   return (
     <div className={`message ${messageClass}`}>
-      <Chip avatar={<Avatar alt="Natacha" src={photoURL} />} label={text} />
+      {/* <Chip avatar={<Avatar alt="Natacha" src={photoURL} />} label={text} /> */}
+      <Avatar alt="Natacha" src={photoURL} />
+      <Chip label={text} />
     </div>
   );
 }
